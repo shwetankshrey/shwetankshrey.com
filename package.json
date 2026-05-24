@@ -16,5 +16,8 @@
     "@fontsource/crimson-pro": "^5.2.8",
     "@fontsource/ibm-plex-mono": "^5.2.7",
     "astro": "^6.3.7"
+  },
+  "devDependencies": {
+    "wrangler": "^4.94.0"
   }
 }
