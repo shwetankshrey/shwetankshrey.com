@@ -1,0 +1,10 @@
+---
+interface Props {
+  n: number | string;
+}
+const { n } = Astro.props;
+---
+
+<aside class="sidenote">
+  <span class="sn-num">{n}.</span><slot />
+</aside>

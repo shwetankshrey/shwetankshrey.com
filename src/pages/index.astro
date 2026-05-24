@@ -1,0 +1,71 @@
+---
+import Base from '../layouts/Base.astro';
+import Sidenote from '../components/Sidenote.astro';
+import Socials from '../components/Socials.astro';
+---
+
+<Base title="shwetank shrey">
+  <section class="hero">
+    <div class="hero-text">
+      <h1 class="h1-name">
+        shwetank shrey<span class="also">— tank for short.</span>
+      </h1>
+      <p class="tagline">
+        full-stack systems engineer who happens to be unusually comfortable down at silicon.
+      </p>
+    </div>
+    <div class="portrait-wrap">
+      <img
+        class="portrait"
+        src="/portrait.png"
+        alt="portrait of tank, yangshuo sunrise"
+        width="640"
+        height="800"
+      />
+      <p class="portrait-caption">yangshuo · sunrise</p>
+    </div>
+  </section>
+
+  <section class="prose">
+    <p class="prose-body">
+      most recently led r&amp;d on cortex band at ultrahuman — built a custom
+      electromyography<a href="#sn-1" class="fn" id="fnref-1">1</a> wrist sensor from scratch
+      and integrated it into a modular passive activity tracker. developed novel
+      neuromuscular biomarkers from the signal: muscle activation, fatigue, grip age.
+    </p>
+    <Sidenote n="1">
+      <span id="sn-1">electromyography reads the electrical activity of muscle contractions
+      off the skin. notoriously noisy on a moving wrist; the wearable problem is making
+      it stable across hours.</span>
+    </Sidenote>
+
+    <p class="prose-body">
+      before that, co-founded tweek labs (cto) — built a wearable motion capture suit
+      and the real-time analytics platform that analyzed athlete performance from its
+      data. used by professional teams; recorded over 10,000 athletes. acquired by
+      ultrahuman in 2024.
+    </p>
+
+    <p class="season">
+      this season: writing, decompressing from a hardware ship, and starting to look
+      around for the next deep-tech systems problem to put hands on.
+    </p>
+  </section>
+
+  <hr />
+
+  <section style="margin-top: 3rem;">
+    <p class="label">essays</p>
+    <p class="prose-body" style="max-width: 64ch;">
+      i've worked across enough of the stack — hardware, firmware, mobile, the systems
+      and sourcing behind them — to have opinions on most of it. drafts in progress.
+    </p>
+  </section>
+
+  <hr />
+
+  <section style="margin-top: 3rem;">
+    <p class="label">elsewhere</p>
+    <Socials />
+  </section>
+</Base>
