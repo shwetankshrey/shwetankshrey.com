@@ -8,10 +8,10 @@
   --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
   --serif: 'Crimson Pro', 'EB Garamond', Georgia, 'Times New Roman', serif;
 
-  --page-max: 1120px;
-  --prose-max: 64ch;
-  --rail-w: 16rem;
-  --gutter: 3rem;
+  --page-max: 960px;
+  --prose-max: 58ch;
+  --rail-w: 260px;
+  --gutter: 2.5rem;
 }
 
 *,
@@ -59,7 +59,7 @@ a:hover {
 hr {
   border: 0;
   border-top: 1px solid var(--rule);
-  margin: 4.5rem 0 0;
+  margin: 2.8rem 0 1.8rem;
 }
 
 img {
@@ -81,7 +81,7 @@ p:last-child {
   width: 100%;
   max-width: var(--page-max);
   margin: 0 auto;
-  padding: 2.5rem 2rem 0;
+  padding: 3rem 2.5rem 5rem;
   flex: 1;
 }
 
@@ -91,8 +91,9 @@ p:last-child {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  padding-bottom: 1.25rem;
+  padding-bottom: 1.1rem;
   border-bottom: 1px solid var(--rule);
+  margin-bottom: 2.8rem;
 }
 
 .wordmark {
@@ -133,8 +134,9 @@ p:last-child {
   font-size: 0.78rem;
   font-weight: 500;
   color: var(--muted);
-  margin: 0 0 1.75rem;
-  letter-spacing: 0.02em;
+  margin: 0 0 1.4rem;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
 }
 
 .label::before {
@@ -156,9 +158,9 @@ p:last-child {
 .hero {
   display: grid;
   grid-template-columns: 1fr 260px;
-  column-gap: 2.5rem;
+  column-gap: var(--gutter);
   align-items: stretch;
-  margin: 3rem 0 0;
+  margin: 0 0 4.5rem;
 }
 
 .hero-text {
@@ -210,10 +212,10 @@ p:last-child {
 
 .prose {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, var(--rail-w));
+  grid-template-columns: 1fr var(--rail-w);
   column-gap: var(--gutter);
-  row-gap: 0;
-  margin: 3rem 0 0;
+  align-items: start;
+  margin: 0;
 }
 
 .prose > * {
@@ -231,15 +233,17 @@ p:last-child {
   line-height: 1.55;
   font-weight: 400;
   max-width: 58ch;
+  margin: 0 0 1.3rem;
 }
 
 .season {
   font-family: var(--mono);
-  font-size: 0.8rem;
-  line-height: 1.7;
+  font-size: 0.82rem;
+  line-height: 1.6;
   color: var(--muted);
-  margin: 2rem 0 0;
-  max-width: 64ch;
+  margin: 1.6rem 0 0;
+  max-width: 58ch;
+  letter-spacing: 0.02em;
 }
 
 .season::before {
@@ -256,17 +260,17 @@ p:last-child {
   color: var(--accent);
   vertical-align: super;
   line-height: 0;
-  margin-left: 0.15em;
+  margin-left: 1px;
   border: none;
+  text-decoration: none;
 }
 
 .sidenote {
   font-family: var(--mono);
-  font-size: 0.74rem;
-  line-height: 1.6;
+  font-size: 0.78rem;
+  line-height: 1.65;
   color: var(--muted);
-  padding-left: 1rem;
-  border-left: 1px solid var(--rule);
+  padding-top: 0.4rem;
   align-self: start;
 }
 
@@ -325,26 +329,38 @@ p:last-child {
 /* ── Elsewhere ──────────────────────────────────────────── */
 
 .elsewhere {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 2.2rem;
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
+  font-size: 0.92rem;
+  line-height: 2;
+  color: var(--ink);
+}
+
+.elsewhere li {
+  display: inline;
+  margin-right: 1.6rem;
 }
 
 .elsewhere a {
-  font-family: var(--serif);
-  font-size: 1.1rem;
-  border: none;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--rule);
+  font-family: var(--mono);
+  font-size: 0.92rem;
+}
+
+.elsewhere a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 .elsewhere .handle {
   font-family: var(--mono);
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   color: var(--muted);
-  margin-left: 0.5em;
-  letter-spacing: 0.02em;
+  margin-left: 0.4em;
+  font-weight: 400;
 }
 
 /* ── About / Contact long form ──────────────────────────── */
@@ -411,19 +427,16 @@ p:last-child {
 /* ── Colophon ───────────────────────────────────────────── */
 
 .colophon {
-  margin-top: 6rem;
-  padding: 1.5rem 2rem 2rem;
+  margin: 3.5rem 0 0;
+  padding: 1.2rem 0 0;
   border-top: 1px solid var(--rule);
   font-family: var(--mono);
   font-size: 0.72rem;
   font-weight: 400;
   letter-spacing: 0.02em;
+  line-height: 1.6;
   color: var(--muted);
   text-align: center;
-  max-width: var(--page-max);
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
 }
 
 /* ── Mobile ─────────────────────────────────────────────── */
