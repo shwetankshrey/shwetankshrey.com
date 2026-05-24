@@ -182,6 +182,10 @@ p:last-child {
   margin: auto 0 0.3rem;
 }
 
+.h1-name .accent {
+  color: var(--accent);
+}
+
 .also {
   font-family: var(--mono);
   font-weight: 400;
