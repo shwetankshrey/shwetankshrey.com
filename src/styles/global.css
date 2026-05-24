@@ -205,13 +205,32 @@ p:last-child {
   color: var(--ink);
 }
 
-.portrait {
+.portrait-frame {
+  position: relative;
   width: 260px;
   height: 260px;
+  align-self: end;
+  overflow: hidden;
+}
+
+.portrait-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    transparent 65%,
+    color-mix(in srgb, var(--bg) 55%, transparent) 100%
+  );
+}
+
+.portrait {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: 50% 35%;
   display: block;
-  align-self: end;
   background: var(--rule);
 }
 
@@ -462,10 +481,9 @@ p:last-child {
     row-gap: 1.5rem;
   }
 
-  .portrait {
+  .portrait-frame {
     width: 200px;
     height: 200px;
-    margin: 0;
     align-self: start;
   }
 
@@ -486,6 +504,8 @@ p:last-child {
   .prose > .sidenote {
     grid-column: 1;
     margin: 0.25rem 0 1.5rem;
+    padding: 0.2rem 0 0.2rem 1rem;
+    border-left: 2px solid var(--rule);
   }
 
   .colophon {
