@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "shwetankshrey-com",
+  "name": "shwetankshrey",
   "compatibility_date": "2025-04-01",
   "assets": {
     "directory": "./dist",
