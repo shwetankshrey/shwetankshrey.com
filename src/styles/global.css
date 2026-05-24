@@ -151,38 +151,39 @@ p:last-child {
   margin: 0 0 0.5rem;
 }
 
-/* ── Hero ───────────────────────────────────────────────── */
+/* ── Hero (side-by-side: text + portrait) ───────────────── */
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 13rem;
-  column-gap: var(--gutter);
-  align-items: start;
-  margin: 4rem 0 0;
+  grid-template-columns: 1fr 260px;
+  column-gap: 2.5rem;
+  align-items: stretch;
+  margin: 3rem 0 0;
 }
 
 .hero-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 56ch;
   min-width: 0;
-  padding-top: 0.25rem;
 }
 
 .h1-name {
   font-family: var(--serif);
   font-weight: 500;
-  font-size: clamp(2rem, 4.5vw, 2.75rem);
-  line-height: 1.15;
+  font-size: 2.5rem;
+  line-height: 1.1;
   letter-spacing: -0.01em;
-  margin: 0 0 0.4rem;
+  margin: auto 0 0.3rem;
 }
 
-.h1-name .also {
+.also {
   font-family: var(--mono);
-  font-size: 0.42em;
   font-weight: 400;
+  font-size: 0.85rem;
   color: var(--muted);
-  vertical-align: middle;
-  margin-left: 0.4em;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+  margin: 0.4rem 0 1.5rem;
 }
 
 .tagline {
@@ -191,29 +192,18 @@ p:last-child {
   line-height: 1.45;
   font-weight: 400;
   max-width: 48ch;
-  margin: 1.25rem 0 0;
+  margin: 0;
   color: var(--ink);
 }
 
-.portrait-wrap {
-  width: 13rem;
-}
-
 .portrait {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 260px;
+  height: 260px;
   object-fit: cover;
   object-position: 50% 35%;
+  display: block;
+  align-self: end;
   background: var(--rule);
-}
-
-.portrait-caption {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: var(--muted);
-  margin: 0.55rem 0 0;
 }
 
 /* ── Prose + sidenote rail ──────────────────────────────── */
@@ -448,13 +438,24 @@ p:last-child {
   }
 
   .hero {
-    grid-template-columns: minmax(0, 1fr);
-    row-gap: 1.75rem;
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
   }
 
-  .hero .portrait-wrap {
-    order: -1;
-    width: 11rem;
+  .portrait {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    align-self: start;
+  }
+
+  .h1-name {
+    font-size: 1.7rem;
+    margin-top: 0;
+  }
+
+  .tagline {
+    font-size: 1.05rem;
   }
 
   .prose {
