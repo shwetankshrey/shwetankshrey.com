@@ -22,14 +22,6 @@
 
 html {
   background: var(--bg);
-  color: var(--ink);
-  font-family: var(--mono);
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.005em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -37,6 +29,17 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.005em;
+  font-feature-settings: 'kern' 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
