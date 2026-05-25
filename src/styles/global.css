@@ -182,7 +182,7 @@ p:last-child {
   margin: auto 0 1.25rem;
 }
 
-.h1-name .accent {
+.accent {
   color: var(--accent);
 }
 
@@ -277,6 +277,15 @@ p:last-child {
   color: var(--accent);
 }
 
+.meta-line {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0.6rem 0 0;
+  letter-spacing: 0.02em;
+}
+
 /* ── Sidenote ───────────────────────────────────────────── */
 
 .fn {
@@ -307,6 +316,12 @@ p:last-child {
 }
 
 /* ── Essay rows ─────────────────────────────────────────── */
+
+.essay-list-wrap {
+  margin: 2.8rem 0 0;
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--rule);
+}
 
 .essay-list {
   list-style: none;
@@ -364,8 +379,7 @@ p:last-child {
 }
 
 .elsewhere li {
-  display: inline;
-  margin-right: 1.6rem;
+  margin: 0;
 }
 
 .elsewhere a {
@@ -392,8 +406,22 @@ p:last-child {
 /* ── About / Contact long form ──────────────────────────── */
 
 .long-prose {
-  max-width: 64ch;
+  display: grid;
+  grid-template-columns: 1fr var(--rail-w);
+  column-gap: var(--gutter);
+  align-items: start;
   margin: 3rem 0 0;
+}
+
+.long-prose > * {
+  grid-column: 1;
+  max-width: 64ch;
+  min-width: 0;
+}
+
+.long-prose > .sidenote {
+  grid-column: 2;
+  max-width: none;
 }
 
 .long-prose h1 {
