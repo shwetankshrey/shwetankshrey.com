@@ -205,12 +205,25 @@ p:last-child {
   color: var(--ink);
 }
 
+.portrait-col {
+  width: 260px;
+  align-self: end;
+}
+
 .portrait-frame {
   position: relative;
-  width: 260px;
-  height: 260px;
-  align-self: end;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
+}
+
+.portrait-caption {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 0.6rem 0 0;
 }
 
 .portrait-frame::after {
@@ -513,9 +526,8 @@ p:last-child {
     row-gap: 1.5rem;
   }
 
-  .portrait-frame {
+  .portrait-col {
     width: 200px;
-    height: 200px;
     align-self: start;
   }
 
