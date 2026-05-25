@@ -331,6 +331,10 @@ p:last-child {
   gap: 2.1rem;
 }
 
+.home-essays {
+  margin: 2.4rem 0 0;
+}
+
 .essay-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
