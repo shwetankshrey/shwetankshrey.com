@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.6",
+    "@astrojs/sitemap": "^3.7.2",
     "@fontsource/crimson-pro": "^5.2.8",
     "@fontsource/ibm-plex-mono": "^5.2.7",
     "astro": "^6.3.7"

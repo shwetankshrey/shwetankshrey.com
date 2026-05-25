@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shwetankshrey.com/sitemap-index.xml
