@@ -1,34 +1,87 @@
 ---
 import Base from '../layouts/Base.astro';
+import Sidenote from '../components/Sidenote.astro';
 ---
 
-<Base title="about — tank">
+<Base
+  title="about — tank"
+  description="shwetank shrey — engineer building end-to-end systems across hardware, firmware, mobile, and cloud. bangalore + shenzhen."
+>
   <article class="long-prose">
-    <p class="kicker">bangalore · shenzhen</p>
     <h1>about</h1>
 
-    <h2>name</h2>
-    <span class="todo">[todo: fill from tank — 1 short paragraph on when "tank" stuck and from whom.]</span>
+    <p>
+      i'm an engineer who builds end-to-end systems. the through-line
+      across the work has been the data architecture — how information
+      moves between hardware, firmware, mobile, and cloud without
+      dropping or lying along the way. i've gone deep into each of those
+      layers at different points, and worn the hats of a software
+      engineer, an embedded engineer, a product manager, and a founder
+      along the way.
+    </p>
+    <p>
+      shwetank is the full name; <span class="accent">tank</span> came
+      from the last four letters of it back in school. no big story
+      behind it — it just stuck, and at some point i started owning it.
+    </p>
 
-    <h2>what i do</h2>
-    <span class="todo">[todo: fill from tank — 3 sentences on the systems-engineer-end-to-end framing.]</span>
+    <h2>work</h2>
+    <p>
+      i co-founded tweek labs out of college. we built a wearable
+      motion-capture suit<a href="#sn-mocap" class="fn" id="fnref-mocap">1</a>
+      and the analytics platform behind it — used by professional sports
+      teams. acquired by ultrahuman in 2024.
+    </p>
+    <Sidenote n="1">
+      <span id="sn-mocap">imagine a camera following you everywhere you
+      go, capturing every movement of your body in precise detail. that's
+      what the suit does — except it does it without the camera, from
+      sensors across the body.</span>
+    </Sidenote>
+    <p>
+      at ultrahuman i kept the platform running for a while, then
+      switched to a new project: a wrist wearable that picks up
+      muscle-level signals from the skin<a href="#sn-emg" class="fn" id="fnref-emg">2</a>
+      — quieter biology than what consumer wrist wearables usually try
+      to measure. five hardware iterations, taken to pilot production.
+    </p>
+    <Sidenote n="2">
+      <span id="sn-emg">the technical term is electromyography. it picks
+      up the electrical activity of muscle contractions through the
+      skin. usually done with sticky electrodes in a lab; making it
+      stable on a moving wrist is the hard part.</span>
+    </Sidenote>
 
-    <h2>the path</h2>
-    <span class="todo">[todo: fill from tank — tweek → ultrahuman → now, narrative not resume, 2–3 sentences per stop.]</span>
+    <p class="meta-line">
+      <a href="/shwetank-shrey-resume.pdf">résumé</a> — last updated may 2026.
+    </p>
 
     <h2>where i work from</h2>
-    <span class="todo">[todo: fill from tank — bangalore + ~6 months/year in shenzhen, 1 paragraph.]</span>
+    <p>
+      i was born in patna and grew up between patna and mumbai. went to
+      delhi for college, then worked between delhi and bangalore after
+      that. settled in bangalore now.
+    </p>
+    <p>
+      the last year has been different. i've spent more than a third of
+      it in shenzhen, dealing with vendors. took a while to get used to
+      the food — eventually i grew to like it. and when i could get out
+      of the factories, i traveled around south china. it's extremely
+      beautiful.
+    </p>
 
-    <h2>what i'm reading</h2>
-    <span class="todo">[todo: fill from tank — 4–6 items, list. books, papers, blogs, channels.]</span>
-
-    <h2>what i write about</h2>
-    <span class="todo">[todo: fill from tank — themes: hardware lifecycle, patents, shenzhen sourcing, ai-for-hardware, generalist engineering.]</span>
-
-    <h2>what i'm looking for next</h2>
-    <span class="todo">[todo: fill from tank — careful framing; not a job-board listing.]</span>
-
-    <h2>outside work</h2>
-    <span class="todo">[todo: fill from tank — 2–3 lines, personal but light.]</span>
+    <h2>music</h2>
+    <p>
+      there should always be music running. i think life is better with
+      a soundtrack, so i keep one going most of the day — in my
+      earphones, or in my head. open-ear headphones (shokz openrun)
+      help; i'm in the world and quietly scoring it at the same time.
+    </p>
+    <p>
+      when i'm doing something that needs precision — mechanical
+      assembly, two pieces that have to mate exactly — i play the
+      docking scene from interstellar in my head. the assembly just
+      happens, perfectly.
+    </p>
   </article>
 </Base>
